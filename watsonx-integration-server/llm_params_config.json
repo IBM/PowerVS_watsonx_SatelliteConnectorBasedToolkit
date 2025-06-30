@@ -1,0 +1,28 @@
+{
+  "input": "You are a developer writing SQL queries given natural language questions. The database contains a set of 3 tables. The schema of each table with description of the attributes is given. Write the SQL query given a natural language statement with names being not case sensitive\nHere are the 3 tables :\n\n(1) Database Table Name: USERS\nTable Schema:\nColumn Name # Meaning\nuser_id # unique identifier of the user\nuser_type_id # user is 'employee', 'customer'\ngender_id # user's gender is 1 for female, 2 for male and 3 for other\ndob # date of birth of the user\naddress # address of the user\nstate # state of the user\ncountry # country of residence of the user\npincode # postalcode of the user residence\nemail # email address of the user\nfirst_name # first name of the user\nlast_name # last name of the user\n\n(2) Database Table Name: ACCOUNTS\nTable Schema:\nColumn Name # Meaning\nacc_id # account number or account id of the user\nu_id # user id of the user\nbalance # available balance in the account\n\n(3) Database Table Name: TRANSACTIONS\nTable Schema:\nColumn Name # Meaning\ntransaction_id # unique id for the transaction\ntran_type_id # transaction type is 1 for debit and 2 for credit\ntransaction_amount # amount transferred from from_acc_id to to_acc_id\ntran_date # date and time of the transaction\nstatus_type_id # status of the transaction is 1 for Success and 2 for Failed\nfrom_acc_id # account number from which the transaction is initiated\nto_acc_id # account number to which the transaction is targeted\nfraud_score # score to indicate if the transaction is fraudulent or not, 1 is fraud and 0 is not fraud\nfraud_category # fraud category is 1 for location, 2 for amount\n\nInput: List fraudulent transactions in last two days\nOutput: select * from transactions, accounts, users where transactions.from_acc_id=accounts.acc_id and accounts.u_id=users.user_id and transactions.fraud_score=1 and transactions.tran_date>=date(now())-interval '2 day';\n\nInput: {user_query}\nOutput:",
+  "parameters": {
+    "decoding_method": "greedy",
+    "max_new_tokens": 100,
+    "repetition_penalty": 1
+  },
+  "model_id": "mistralai/mixtral-8x7b-instruct-v01",
+  "project_id": "0f37e8c1-b509-47ef-8a9c-acf6e56a1318",
+  "moderations": {
+    "hap": {
+      "input": {
+        "enabled": true,
+        "threshold": 0.5,
+        "mask": {
+          "remove_entity_value": true
+        }
+      },
+      "output": {
+        "enabled": true,
+        "threshold": 0.5,
+        "mask": {
+          "remove_entity_value": true
+        }
+      }
+    }
+  }
+}

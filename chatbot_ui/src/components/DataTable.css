@@ -1,0 +1,23 @@
+.chatbot-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+  }
+  
+  .chatbot-table th,
+  .chatbot-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .chatbot-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .chatbot-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  

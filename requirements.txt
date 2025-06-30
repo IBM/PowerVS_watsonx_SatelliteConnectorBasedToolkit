@@ -1,0 +1,8 @@
+flask
+gevent
+hdbcli
+oracledb
+psycopg2
+python-dotenv
+requests
+setuptools

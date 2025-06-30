@@ -1,0 +1,25 @@
+# Base image with Node.js
+FROM ppc64le/node:18-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Set environment variable
+ENV VITE_CHATBOT_API_PROTOCOL=http
+ENV VITE_CHATBOT_API_HOST=
+ENV VITE_CHATBOT_API_PORT=9476 
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application files
+COPY . .
+
+# Expose Vite's default development port
+EXPOSE 5173
+
+# Run the development server
+CMD ["npm", "run", "dev", "--", "--host"]

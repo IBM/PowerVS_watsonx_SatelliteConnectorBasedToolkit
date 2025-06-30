@@ -1,0 +1,112 @@
+.chatbot {
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .chatbot-title {
+    font-size: 16px;
+  }
+  
+  .chatbot-controls button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .chatbot-controls button:hover {
+    color: #ddd;
+  }
+  
+  /* Minimized state styling */
+  .chatbot.minimized {
+    height: 40px; /* Show only the header */
+  }
+  
+  /* Maximized state styling */
+  .chatbot.maximized {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    right: 10%;
+    bottom: auto;
+  }
+  
+  .chatbot-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 40px);
+  }
+  
+  .chat-history {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    width: 100%;
+  }
+
+  .message.bot {
+    background-color: #e5e5ea;
+    color: #333;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .message.user {
+    align-self: flex-start;
+    background-color: mediumseagreen;
+    color: #333;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-box {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .input-box input[type="text"] {
+    flex-grow: 1;
+    background-color: #e5e5ea;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 18px;
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  .input-box button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5%;
+    cursor: pointer;
+  }
+  
+  .input-box button:hover {
+    background-color: #0056b3;
+  }
+  
