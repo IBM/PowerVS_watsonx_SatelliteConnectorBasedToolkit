@@ -2,7 +2,8 @@
 
 This is the **Power Virtual Server and watsonx integration using Toolkit with Satellite Connector**
 
-![image](https://github.ibm.com/AIonPower/powervs_watsonx_toolkit_sc/assets/500794/6e114515-fce9-41b0-be57-7defdbea1f9a)
+<img width="1029" alt="image" src="https://github.com/user-attachments/assets/6f1dd121-d039-4251-a2d4-91193f7240f9" />
+
 
 The above reference architecture diagram illustrates the Toolkit architecture
 for NLP2 SQL with Insights, highlighting its modular design and key
