@@ -1,0 +1,30 @@
+# Build stage
+FROM ppc64le/node:18-alpine AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files and install dependencies
+COPY package*.json ./
+RUN npm install
+
+# Set environment variable
+ENV VITE_CHATBOT_API_PROTOCOL=http
+ENV VITE_CHATBOT_API_HOST=
+ENV VITE_CHATBOT_API_PORT=9476 
+
+# Copy application source code and build
+COPY . .
+RUN npm run build
+
+# Production stage
+FROM nginx:stable-alpine
+
+# Copy the built files to NGINX
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Start NGINX server
+CMD ["nginx", "-g", "daemon off;"]

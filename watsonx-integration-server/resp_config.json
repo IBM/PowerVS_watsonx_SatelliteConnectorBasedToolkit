@@ -1,0 +1,13 @@
+{
+    "type": "agent",
+    "sections": [
+        {
+            "type": "text",
+            "data": "I have found the following transactions based on your request."
+        },
+        {
+            "type": "table",
+            "data": []
+        }
+    ]
+}
