@@ -40,7 +40,7 @@ The overall structure is divided into several components:
 #### Step 2: Login to VM, git clone the Toolkit repo:
 
 ```bash
-[bash:~]: git clone https://github.ibm.com/AIonPower/powervs_watsonx_toolkit_sc
+[bash:~]: git clone https://github.com/IBM/PowerVS_watsonx_SatelliteConnectorBasedToolkit.git
 [bash:~]: cd powervs_watsonx_toolkit_sc
 [bash:~]: /powervs_watsonx_toolkit_sc]: ls
 ```
@@ -381,5 +381,5 @@ Starting API server on port 9476
 
 #### Step 11: To set up Gen AI Assistant follow the instructions in the README link:
 
-https://github.ibm.com/AIonPower/powervs_watsonx_toolkit_sc/blob/main/chatbot_ui/README.md
+https://github.com/IBM/PowerVS_watsonx_SatelliteConnectorBasedToolkit/blob/main/chatbot_ui/README.md
 
